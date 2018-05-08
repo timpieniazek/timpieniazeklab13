@@ -36,14 +36,14 @@ public class RoshamboApp {
 		// Prompts user to choose an opponent
 		userChoice = Validator.getDOrS(scan,
 				String.format("Would you like to play against %s or %s? ", p1.getName(), p2.getName()));
-		
-		System.out.println();
-		
+			
 		if (userChoice.equalsIgnoreCase("d")) {
 			opponent = p1;
+			System.out.println(((PlayerOne) p1).getGreeting());
 		} else {
 			opponent = p2;
 		}
+		System.out.println();
 		
 		String cont = "y";
 		while (cont.equalsIgnoreCase("y")) {
@@ -55,15 +55,13 @@ public class RoshamboApp {
 			cont = Validator.getYesOrNo(scan, "Would you like to continue? (y/n): ");
 			System.out.println();
 		}
+//		System.out.println();
+		System.out.printf("Wins: %s  Loses: %s  Draws: %s", scorecard[0], scorecard[2], scorecard[1]);
 		System.out.println();
-		System.out.printf("Wins: %s  Loses: %s  Draws: %s", scorecard[0], scorecard[1], scorecard[2]);
+		System.out.println("Thank you and Goodbye!");
 	}
 	
 	public static String playGame(Player user, Player opponent, Scanner scan) {
-		if (opponent instanceof PlayerOne) {
-			System.out.println(((PlayerOne) opponent).getGreeting());
-			System.out.println();
-		}
 		
 		String userInput = Validator.getRPS(scan, "Rock, Paper, or Scissors? (r/p/s): ");
 		System.out.println();
