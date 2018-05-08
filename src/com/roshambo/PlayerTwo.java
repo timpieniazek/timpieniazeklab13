@@ -1,16 +1,26 @@
 package com.roshambo;
 
 public class PlayerTwo extends Player {
+	
 
-	public PlayerTwo(String name, String greeting) {
-		super(name, greeting);
+	public PlayerTwo(String name) {
+		super(name);
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public Roshambo generateRoshambo() {
-		// TODO Auto-generated method stub
-		return null;
+		int random = (int) (Math.random() * 3 + 1);
+		switch (random) {
+		case 1:
+			return Roshambo.ROCK;
+		case 2:
+			return Roshambo.PAPER;
+		case 3:
+			return Roshambo.SCISSORS;
+		default:
+			return null;
+		}
 	}
 
 }

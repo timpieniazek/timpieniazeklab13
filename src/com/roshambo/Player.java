@@ -2,15 +2,13 @@ package com.roshambo;
 
 public abstract class Player {
 	private String name;
-	private String greeting;
 	enum Roshambo {ROCK, PAPER, SCISSORS};
 	
 	
-	public Player(String name, String greeting) {
+	public Player(String name) {
 		super();
 		this.name = name;
-		this.greeting = greeting;
-	}
+		}
 	
 	
 	public String getName() {
@@ -21,14 +19,12 @@ public abstract class Player {
 	}
 
 	
-	public String getGreeting() {
-		return greeting;
-	}
-	public void setGreeting(String greeting) {
-		this.greeting = greeting;
-	}
-
-
 	public abstract Roshambo generateRoshambo();
+
+
+	public Roshambo generateRoshambo(String userChoice) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
