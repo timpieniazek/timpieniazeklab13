@@ -17,13 +17,13 @@ public class Validator {
 		while (!isValid) {
 			System.out.printf(prompt);
 			s = scan.next(); // read user entry
-			if (s.equalsIgnoreCase("d") || s.equalsIgnoreCase("dj")) {
-				return "y";
-			} else if (s.equalsIgnoreCase("s") || s.equalsIgnoreCase("sg")) {
-				return "n";
+			if (s.equalsIgnoreCase("d") || s.equalsIgnoreCase("d")) {
+				return "d";
+			} else if (s.equalsIgnoreCase("j") || s.equalsIgnoreCase("j")) {
+				return "s";
 			} else {
 				System.out.print("\nInput not recognized. ");
-				prompt = "(enter \"d\" or \"s\"): ";
+				prompt = "(enter \"d\" or \"j\"): ";
 			}
 			
 		}
@@ -46,6 +46,26 @@ public class Validator {
 			} else {
 				System.out.print("\nInput not recognized. ");
 				prompt = "(enter \"r\" or \"p\" or \"s\"): ";
+			}
+			
+		}
+		return s;
+		
+	}
+	
+	public static String getYesOrNo(Scanner scan, String prompt) {
+		String s = "";
+		boolean isValid = false;
+		while (!isValid) {
+			System.out.printf(prompt);
+			s = scan.next(); // read user entry
+			if (s.equalsIgnoreCase("yes") || s.equalsIgnoreCase("y")) {
+				return "y";
+			} else if (s.equalsIgnoreCase("no") || s.equalsIgnoreCase("n")) {
+				return "n";
+			} else {
+				System.out.print("\nInput not recognized. ");
+				prompt = "(enter \"y\" or \"n\"): ";
 			}
 			
 		}

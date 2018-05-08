@@ -13,11 +13,11 @@ public class PlayerTwo extends Player {
 		int random = (int) (Math.random() * 3 + 1);
 		switch (random) {
 		case 1:
-			return Roshambo.ROCK;
+			return Roshambo.Rock;
 		case 2:
-			return Roshambo.PAPER;
+			return Roshambo.Paper;
 		case 3:
-			return Roshambo.SCISSORS;
+			return Roshambo.Scissors;
 		default:
 			return null;
 		}

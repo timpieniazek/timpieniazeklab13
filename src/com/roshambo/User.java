@@ -1,6 +1,6 @@
 package com.roshambo;
 
-public class User extends Player {private
+public class User extends Player {
 		
 	public User(String name) {
 		super(name);
@@ -8,14 +8,14 @@ public class User extends Player {private
 
 	
 	@Override
-	public Roshambo generateRoshambo(String userChoice) {
-		switch (userChoice) {
+	public Roshambo generateRoshambo(String userInput) {
+		switch (userInput) {
 		case "r":
-			return Roshambo.ROCK;
+			return Roshambo.Rock;
 		case "p":
-			return Roshambo.PAPER;
+			return Roshambo.Paper;
 		case "s":
-			return Roshambo.SCISSORS;
+			return Roshambo.Scissors;
 			default:
 				return null;
 				

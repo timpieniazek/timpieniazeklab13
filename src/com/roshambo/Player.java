@@ -2,7 +2,7 @@ package com.roshambo;
 
 public abstract class Player {
 	private String name;
-	enum Roshambo {ROCK, PAPER, SCISSORS};
+	enum Roshambo {Rock, Paper, Scissors};
 	
 	
 	public Player(String name) {
