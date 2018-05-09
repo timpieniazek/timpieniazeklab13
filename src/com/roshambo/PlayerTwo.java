@@ -1,12 +1,30 @@
 package com.roshambo;
 
 public class PlayerTwo extends Player {
+	private String greeting;
 	
-
 	public PlayerTwo(String name) {
 		super(name);
 		// TODO Auto-generated constructor stub
 	}
+
+	
+	public PlayerTwo(String name, String greeting) {
+		super(name);
+		this.greeting = greeting;
+	}
+
+	
+
+	public String getGreeting() {
+		return greeting;
+	}
+
+
+	public void setGreeting(String greeting) {
+		this.greeting = greeting;
+	}
+
 
 	@Override
 	public Roshambo generateRoshambo() {
@@ -21,6 +39,11 @@ public class PlayerTwo extends Player {
 		default:
 			return null;
 		}
+	}
+	
+	@Override
+	public String toString() {
+		return "\"" + greeting + "\" - Dwayne Johnson";
 	}
 
 }

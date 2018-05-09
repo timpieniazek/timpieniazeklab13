@@ -28,7 +28,7 @@ public class RoshamboApp {
 		// Generates Player classes for user, playerone, and playertwo
 		Player user = new User(userName);
 		Player p1 = new PlayerOne("Dwayne", "The Rock will Layeth the Smacketh Down all over your Candy Ass!");
-		Player p2 = new PlayerTwo("Johnson");
+		Player p2 = new PlayerTwo("Johnson", "Success isn’t always about ‘Greatness’, it’s about consistency.\nConsistent, hard work gains success. Greatness will come.");
 		
 		System.out.printf("%nHello, %s!", user.getName());
 		System.out.println();
@@ -39,9 +39,10 @@ public class RoshamboApp {
 			
 		if (userChoice.equalsIgnoreCase("d")) {
 			opponent = p1;
-			System.out.println(((PlayerOne) p1).getGreeting());
+			System.out.println(p1);
 		} else {
 			opponent = p2;
+			System.out.println(p2);
 		}
 		System.out.println();
 		
@@ -56,6 +57,7 @@ public class RoshamboApp {
 			System.out.println();
 		}
 //		System.out.println();
+		System.out.println(user.getName() + " score:");
 		System.out.printf("Wins: %s  Loses: %s  Draws: %s", scorecard[0], scorecard[2], scorecard[1]);
 		System.out.println();
 		System.out.println("Thank you and Goodbye!");

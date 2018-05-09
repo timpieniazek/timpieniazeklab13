@@ -26,4 +26,10 @@ public class PlayerOne extends Player {
 		return Roshambo.Rock;
 	}
 
+	@Override
+	public String toString() {
+		return "\"" + greeting + "\" - The Rock";
+	}
+
+	
 }
